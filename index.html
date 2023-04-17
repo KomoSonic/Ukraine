@@ -34,17 +34,7 @@
         <script src="data/ClaimedUkrainianCounteroffensives_4.js"></script>
         <script src="data/ReportedUkrainianPartisanWarfare_5.js"></script>
         <script src="data/AssessedRussiancontrolledUkrainianTerritory_6.js"></script>
-        <script>
-            
-        // Code change
-        // May replace "terrair" here with "toner" or "watercolor"
-        var layer = new L.StamenTileLayer("terrain");
-        var map = new L.Map("element_id", {
-         center: new L.LatLng(37.7, -122.4),
-         zoom: 12
-        });
-        map.addLayer(layer);
-            
+        <script>         
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[43.93234157781505,27.446420897523794],[50.58507573757337,42.26689716120411]]);
@@ -56,7 +46,7 @@
         }
         map.createPane('pane_StamenTerrain_0');
         map.getPane('pane_StamenTerrain_0').style.zIndex = 400;
-        var layer_StamenTerrain_0 = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg', {
+        var layer_StamenTerrain_0 = L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.png', {
             pane: 'pane_StamenTerrain_0',
             opacity: 1.0,
             attribution: '',
