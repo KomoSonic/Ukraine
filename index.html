@@ -37,10 +37,12 @@
         <script>
             
         // Code change
-        var map = new L.Map('map', {
-            zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[43.93234157781505,27.446420897523794],[50.58507573757337,42.26689716120411]]);
+        // May replace "terrair" here with "toner" or "watercolor"
         var layer = new L.StamenTileLayer("terrain");
+        var map = new L.Map("element_id", {
+         center: new L.LatLng(37.7, -122.4),
+         zoom: 12
+        });
         map.addLayer(layer);
             
         var map = L.map('map', {
